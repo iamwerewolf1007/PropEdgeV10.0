@@ -43,7 +43,7 @@ REPO_DIR   = Path.home() / 'Documents' / 'GitHub' / 'PropEdgeV10.0'
 GIT_REMOTE = 'git@github.com:iamwerewolf1007/PropEdgeV10.0.git'
 
 # ─── API ──────────────────────────────────────────────────────────────────────
-ODDS_API_KEY  = 'c0bab20a574208a41a6e0d930cdaf313'
+ODDS_API_KEY  = 'a77b14b513399a472139e58390aac514'
 ODDS_API_BASE = 'https://api.the-odds-api.com/v4'
 SPORT         = 'basketball_nba'
 CREDIT_ALERT  = 170
