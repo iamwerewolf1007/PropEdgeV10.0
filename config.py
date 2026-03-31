@@ -49,11 +49,58 @@ SPORT         = 'basketball_nba'
 CREDIT_ALERT  = 170
 
 # ─── TIMEZONE ─────────────────────────────────────────────────────────────────
-def _offset(hours): return timezone(timedelta(hours=hours))
-def _is_dst():      m = datetime.now(timezone.utc).month; return 3 <= m <= 10
+# US and UK go on/off DST on DIFFERENT dates each year.
+# Using a single _is_dst() for both caused wrong offsets during the gap:
+#   US EDT starts: 2nd Sunday of March
+#   UK BST starts: last Sunday of March
+#   (2-3 week gap where US is EDT but UK is still GMT)
+#
+# Fix: use zoneinfo (Python 3.9+) for accurate DST — falls back to manual rules.
 
-def get_et(): return _offset(-4 if _is_dst() else -5)
-def get_uk(): return _offset(1  if _is_dst() else 0)
+try:
+    from zoneinfo import ZoneInfo as _ZI
+    _ET_TZ = _ZI('America/New_York')  # handles EST ↔ EDT automatically
+    _UK_TZ = _ZI('Europe/London')     # handles GMT ↔ BST automatically
+    def get_et(): return _ET_TZ
+    def get_uk(): return _UK_TZ
+
+except ImportError:
+    # Fallback: manual offset using correct US and UK DST rules separately
+    from datetime import timezone, timedelta
+
+    def _us_dst(dt_utc):
+        """True if US Eastern is on EDT (UTC-4). 2nd Sunday of March → 1st Sunday of November."""
+        y = dt_utc.year
+        # 2nd Sunday of March
+        mar1 = datetime(y, 3, 1, tzinfo=timezone.utc)
+        dst_start = mar1 + timedelta(days=(6 - mar1.weekday()) % 7 + 7)
+        dst_start = dst_start.replace(hour=7)   # 2:00 AM EST = 07:00 UTC
+        # 1st Sunday of November
+        nov1 = datetime(y, 11, 1, tzinfo=timezone.utc)
+        dst_end = nov1 + timedelta(days=(6 - nov1.weekday()) % 7)
+        dst_end = dst_end.replace(hour=6)        # 2:00 AM EDT = 06:00 UTC
+        return dst_start <= dt_utc < dst_end
+
+    def _uk_dst(dt_utc):
+        """True if UK is on BST (UTC+1). Last Sunday of March → Last Sunday of October."""
+        y = dt_utc.year
+        # Last Sunday of March
+        apr1 = datetime(y, 4, 1, tzinfo=timezone.utc)
+        bst_start = apr1 - timedelta(days=(apr1.weekday() + 1) % 7)
+        bst_start = bst_start.replace(hour=1)   # 1:00 AM GMT = 01:00 UTC
+        # Last Sunday of October
+        nov1 = datetime(y, 11, 1, tzinfo=timezone.utc)
+        bst_end = nov1 - timedelta(days=(nov1.weekday() + 1) % 7)
+        bst_end = bst_end.replace(hour=1)        # 1:00 AM BST = 01:00 UTC
+        return bst_start <= dt_utc < bst_end
+
+    def get_et():
+        now = datetime.now(timezone.utc)
+        return timezone(timedelta(hours=-4 if _us_dst(now) else -5))
+
+    def get_uk():
+        now = datetime.now(timezone.utc)
+        return timezone(timedelta(hours=1 if _uk_dst(now) else 0))
 
 def today_et():  return datetime.now(get_et()).strftime('%Y-%m-%d')
 def now_uk():    return datetime.now(get_uk())

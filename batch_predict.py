@@ -266,11 +266,26 @@ def fetch_props(date_str):
     Collects: player lines (with per-book min/max), spreads, totals (with odds).
     After fetching, appends everything to FILE_PROPS Excel.
     Returns (games dict, spreads list).
+
+    Window fix: fr/to anchored to ET midnight of date_str (not naive UTC midnight).
+    Previous code used naive UTC midnight which caused the window to straddle the
+    previous day's evening games — fetching yesterday's 7PM games instead of today's.
     """
     print(f"\n  Fetching props for {date_str} (Batch {BATCH})...")
-    d  = datetime.strptime(date_str, '%Y-%m-%d')
-    fr = (d - timedelta(hours=6)).strftime('%Y-%m-%dT%H:%M:%SZ')
-    to = (d + timedelta(hours=30)).strftime('%Y-%m-%dT%H:%M:%SZ')
+
+    # Anchor the window to ET midnight of date_str.
+    # This ensures ALL games for the ET date are captured regardless of when the
+    # batch runs or what DST state we are in.
+    et = get_et()
+    year, month, day = int(date_str[:4]), int(date_str[5:7]), int(date_str[8:10])
+    et_midnight = datetime(year, month, day, 0, 0, 0, tzinfo=et)   # midnight ET
+    et_midnight_utc = et_midnight.astimezone(timezone.utc)
+
+    # Window: 1h before ET midnight → 25h after ET midnight
+    # Covers full ET day (00:00–23:59 ET) with a safety buffer on each side.
+    fr = (et_midnight_utc - timedelta(hours=1)).strftime('%Y-%m-%dT%H:%M:%SZ')
+    to = (et_midnight_utc + timedelta(hours=25)).strftime('%Y-%m-%dT%H:%M:%SZ')
+    print(f"    Window: {fr} → {to} (UTC, anchored to ET midnight)")
 
     r1 = requests.get(f"{ODDS_API_BASE}/sports/{SPORT}/events",
                       params={'apiKey': ODDS_API_KEY, 'dateFormat': 'iso',
