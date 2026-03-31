@@ -1,3 +1,9 @@
 ts,batch,event,file,rows_before,rows_after,detail
 2026-03-31 23:19:09,GEN,SEASON_2425_GENERATED,season_2024_25.json,,10515,
 2026-03-31 23:25:39,GEN,SEASON_2526_GENERATED,season_2025_26.json,,16122,
+2026-03-31 23:26:53,B0,BATCH_START,,,,
+2026-03-31 23:27:04,B0,BOXSCORES_FETCHED,,,,163 rows for 2026-03-30
+2026-03-31 23:27:10,B0,BATCH_SUMMARY,,,,"plays_graded=89, wins=51, losses=38, dnp=16"
+2026-03-31 23:27:12,B0,FILE_STATE_BEFORE_APPEND,nba_gamelogs_2025_26.csv,24137,,
+2026-03-31 23:27:26,B0,INTEGRITY_OK,/Users/salman/Documents/GitHub/PropEdgeV10.0/source-files/nba_gamelogs_2025_26.csv,24137,24300,APPEND_GAMELOGS
+2026-03-31 23:27:26,B0,ROLLING_UPDATE_FAILED,,,,name 'load_combined' is not defined
