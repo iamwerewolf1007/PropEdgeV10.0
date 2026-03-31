@@ -15,3 +15,7 @@ ts,batch,event,file,rows_before,rows_after,detail
 2026-03-31 08:10:12,B1,INTEGRITY_OK,/Users/salman/Documents/GitHub/PropEdgeV10.0/data/today.json,0,23,SAVE_TODAY
 2026-03-31 08:10:51,B1,BATCH_COMPLETE,,,,
 2026-03-31 08:11:24,B0,BATCH_COMPLETE,,,,
+2026-03-31 18:00:01,B2,BATCH_START,,,,2026-03-31
+2026-03-31 18:00:18,B2,PROPS_FETCHED,,,,"0 props, 7 games"
+2026-03-31 21:30:01,B3,BATCH_START,,,,2026-03-31
+2026-03-31 21:30:18,B3,PROPS_FETCHED,,,,"0 props, 7 games"
