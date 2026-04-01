@@ -1,0 +1,41 @@
+============================================================
+PropEdge V10.0 — BATCH 2: PREDICT
+  Date: 2026-04-01 | 2026-04-01 18:00 BST
+============================================================
+
+  Fetching props for 2026-04-01 (Batch 2)...
+    Window: 2026-04-01T03:00:00Z → 2026-04-02T05:00:00Z (UTC, anchored to ET midnight)
+    Credits: 19883 events
+    9 games on 2026-04-01
+    Credits: 19877 
+    ✓ ATL @ ORL: 13 props
+    Credits: 19868 
+    ✓ PHI @ WAS: 11 props
+    Credits: 19856 
+    ✓ BOS @ MIA: 13 props
+    Credits: 19844 
+    ✓ MIL @ HOU: 11 props
+    Credits: 19841 
+    ✓ NYK @ MEM: 11 props
+    Credits: 19829 
+    ✓ SAC @ TOR: 15 props
+    Credits: 19817 
+    ✓ IND @ CHI: 9 props
+    Credits: 19811 
+    ✓ DEN @ UTA: 12 props
+    Credits: 19805 
+    ✓ SAS @ GSW: 13 props
+  Total: 108 props across 9 games
+  ✓ Excel updated: PropEdge_-_Match_and_Player_Prop_lines_.xlsx
+    Player_Points_Props : 16,321 → 16,324 rows (+3)
+    Team_Spreads_Totals : 1,394 → 1,394 rows (+0)
+
+  Running V10.0 predictions...
+    Building B2B delta + dynamic DVP caches...
+    Segment model: 3 tiers
+  107 predictions (101 conviction + 6 leans, 1 skipped)
+    Skips: 1 no_player
+
+  ✓ today.json: 109 plays (10 T1, 17 T2)
+    Added:3 Updated:104 Preserved:2
+  ✓ Git push: B2: 2026-04-01 — 107 plays
