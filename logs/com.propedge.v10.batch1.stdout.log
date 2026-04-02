@@ -39,3 +39,37 @@ PropEdge V10.0 — BATCH 1: PREDICT
   ✓ today.json: 106 plays (11 T1, 14 T2)
     Added:106 Updated:0 Preserved:0
   ✓ Git push: B1: 2026-04-01 — 106 plays
+============================================================
+PropEdge V10.0 — BATCH 1: PREDICT
+  Date: 2026-04-02 | 2026-04-02 08:00 BST
+============================================================
+
+  Fetching props for 2026-04-02 (Batch 1)...
+    Window: 2026-04-02T03:00:00Z → 2026-04-03T05:00:00Z (UTC, anchored to ET midnight)
+    Credits: 19219 events
+    6 games on 2026-04-02
+    Credits: 19204 
+    ✓ PHX @ CHA: 15 props
+    Credits: 19192 
+    ✓ MIN @ DET: 14 props
+    Credits: 19180 
+    ✓ LAL @ OKC: 15 props
+    Credits: 19156 
+    ✓ CLE @ GSW: 10 props
+    Credits: 19150 
+    ✓ NOP @ POR: 14 props
+    Credits: 19147 
+    ✓ SAS @ LAC: 15 props
+  Total: 83 props across 6 games
+  ✓ Excel updated: PropEdge_-_Match_and_Player_Prop_lines_.xlsx
+    Player_Points_Props : 16,330 → 16,413 rows (+83)
+    Team_Spreads_Totals : 1,394 → 1,400 rows (+6)
+
+  Running V10.0 predictions...
+    Building B2B delta + dynamic DVP caches...
+    Segment model: 3 tiers
+  83 predictions (74 conviction + 9 leans, 0 skipped)
+
+  ✓ today.json: 83 plays (9 T1, 9 T2)
+    Added:83 Updated:0 Preserved:0
+  ✓ Git push: B1: 2026-04-02 — 83 plays
