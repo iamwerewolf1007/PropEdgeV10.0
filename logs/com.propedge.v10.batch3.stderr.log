@@ -11,3 +11,16 @@ Traceback (most recent call last):
   File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/requests/models.py", line 1026, in raise_for_status
     raise HTTPError(http_error_msg, response=self)
 requests.exceptions.HTTPError: 503 Server Error: Service Unavailable for url: https://api.the-odds-api.com/v4/sports/basketball_nba/events?apiKey=a77b14b513399a472139e58390aac514&dateFormat=iso&commenceTimeFrom=2026-04-01T03%3A00%3A00Z&commenceTimeTo=2026-04-02T05%3A00%3A00Z
+Traceback (most recent call last):
+  File "/Users/salman/Documents/GitHub/PropEdgeV10.0/batch_predict.py", line 814, in <module>
+    if __name__ == '__main__': main()
+                               ~~~~^^
+  File "/Users/salman/Documents/GitHub/PropEdgeV10.0/batch_predict.py", line 797, in main
+    games, _ = fetch_props(date_str)
+               ~~~~~~~~~~~^^^^^^^^^^
+  File "/Users/salman/Documents/GitHub/PropEdgeV10.0/batch_predict.py", line 294, in fetch_props
+    r1.raise_for_status()
+    ~~~~~~~~~~~~~~~~~~~^^
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/requests/models.py", line 1026, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 503 Server Error: Service Unavailable for url: https://api.the-odds-api.com/v4/sports/basketball_nba/events?apiKey=a77b14b513399a472139e58390aac514&dateFormat=iso&commenceTimeFrom=2026-04-03T03%3A00%3A00Z&commenceTimeTo=2026-04-04T05%3A00%3A00Z
