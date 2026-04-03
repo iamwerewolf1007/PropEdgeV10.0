@@ -5,3 +5,36 @@ PropEdge V10.0 — BATCH 3: PREDICT
 
   Fetching props for 2026-04-01 (Batch 3)...
     Window: 2026-04-01T03:00:00Z → 2026-04-02T05:00:00Z (UTC, anchored to ET midnight)
+============================================================
+PropEdge V10.0 — BATCH 3: PREDICT
+  Date: 2026-04-02 | 2026-04-02 21:30 BST
+============================================================
+
+  Fetching props for 2026-04-02 (Batch 3)...
+    Window: 2026-04-02T03:00:00Z → 2026-04-03T05:00:00Z (UTC, anchored to ET midnight)
+    Credits: 19057 events
+    6 games on 2026-04-02
+    Credits: 19054 
+    ✓ PHX @ CHA: 15 props
+    ✗ Minnesota Timberwolves @ Detroit Pistons: 503 Server Error: Service Unavailable for url: https://api.the-odds-api.com/v4/sports/basketball_nba/events/b70520c84d1db67fb83d5d3666ef1d46/odds?apiKey=a77b14b513399a472139e58390aac514&regions=us&markets=player_points%2Cspreads%2Ctotals&oddsFormat=american&dateFormat=iso
+    Credits: 19045 
+    ✓ LAL @ OKC: 14 props
+    Credits: 19039 
+    ✓ CLE @ GSW: 12 props
+    Credits: 19033 
+    ✓ NOP @ POR: 14 props
+    Credits: 19027 
+    ✓ SAS @ LAC: 8 props
+  Total: 63 props across 6 games
+  ✓ Excel updated: PropEdge_-_Match_and_Player_Prop_lines_.xlsx
+    Player_Points_Props : 16,415 → 16,415 rows (+0)
+    Team_Spreads_Totals : 1,400 → 1,400 rows (+0)
+
+  Running V10.0 predictions...
+    Building B2B delta + dynamic DVP caches...
+    Segment model: 3 tiers
+  63 predictions (58 conviction + 5 leans, 0 skipped)
+
+  ✓ today.json: 85 plays (9 T1, 12 T2)
+    Added:0 Updated:63 Preserved:22
+  ✓ Git push: B3: 2026-04-02 — 63 plays
