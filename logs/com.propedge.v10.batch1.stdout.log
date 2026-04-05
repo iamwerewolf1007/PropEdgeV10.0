@@ -143,3 +143,54 @@ PropEdge V10.0 — BATCH 1: PREDICT
   ✓ today.json: 37 plays (5 T1, 5 T2)
     Added:37 Updated:0 Preserved:0
   ✓ Git push: B1: 2026-04-04 — 37 plays
+============================================================
+PropEdge V10.0 — BATCH 1: PREDICT
+  Date: 2026-04-05 | 2026-04-05 08:15 BST
+============================================================
+
+  Fetching props for 2026-04-05 (Batch 1)...
+    Window: 2026-04-05T03:00:00Z → 2026-04-06T05:00:00Z (UTC, anchored to ET midnight)
+    Credits: 18496 events
+    11 games on 2026-04-05
+    Credits: 18484 
+    ✓ TOR @ BOS: 13 props
+    Credits: 18475 
+    ✓ WAS @ BKN: 10 props
+    Credits: 18460 
+    ✓ PHX @ CHI: 11 props
+    Credits: 18448 
+    ✓ MEM @ MIL: 8 props
+    Credits: 18436 
+    ✓ IND @ CLE: 12 props
+    Credits: 18424 
+    ✓ CHA @ MIN: 13 props
+    Credits: 18412 
+    ✓ ORL @ NOP: 12 props
+    Credits: 18400 
+    ✓ UTA @ OKC: 15 props
+    Credits: 18388 
+    ✓ LAL @ DAL: 13 props
+    Credits: 18376 
+    ✓ LAC @ SAC: 12 props
+    Credits: 18364 
+    ✓ HOU @ GSW: 13 props
+  Total: 132 props across 11 games
+  ✓ Excel updated: PropEdge_-_Match_and_Player_Prop_lines_.xlsx
+    Player_Points_Props : 16,564 → 16,696 rows (+132)
+    Team_Spreads_Totals : 1,412 → 1,423 rows (+11)
+
+  Running V10.0 predictions...
+    Building B2B delta + dynamic DVP caches...
+    Segment model: 3 tiers
+  131 predictions (125 conviction + 6 leans, 1 skipped)
+    Skips: 1 no_player
+
+  ✓ today.json: 131 plays (18 T1, 27 T2)
+    Added:131 Updated:0 Preserved:0
+  ⚠ Git push: B1: 2026-04-05 — 131 plays
+    ssh: connect to host github.com port 22: Network is down
+fatal: Could not read from remote repository.
+
+Please make sure you have the correct access rights
+and the repository exists.
+
