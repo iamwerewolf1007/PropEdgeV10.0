@@ -143,3 +143,46 @@ PropEdge V10.0 — BATCH 2: PREDICT
   ✓ today.json: 39 plays (7 T1, 3 T2)
     Added:0 Updated:39 Preserved:0
   ✓ Git push: B2: 2026-04-04 — 39 plays
+============================================================
+PropEdge V10.0 — BATCH 2: PREDICT
+  Date: 2026-04-05 | 2026-04-05 18:00 BST
+============================================================
+
+  Fetching props for 2026-04-05 (Batch 2)...
+    Window: 2026-04-05T03:00:00Z → 2026-04-06T05:00:00Z (UTC, anchored to ET midnight)
+    Credits: 18199 events
+    11 games on 2026-04-05
+    Credits: 18196 
+    ✓ TOR @ BOS: 13 props
+    ✗ Washington Wizards @ Brooklyn Nets: 503 Server Error: Service Unavailable for url: https://api.the-odds-api.com/v4/sports/basketball_nba/events/c1b3d187f022b0870bfa7128e1d02ae5/odds?apiKey=a77b14b513399a472139e58390aac514&regions=us&markets=player_points%2Cspreads%2Ctotals&oddsFormat=american&dateFormat=iso
+    Credits: 18193 
+    ✓ PHX @ CHI: 12 props
+    Credits: 18190 
+    ✓ MEM @ MIL: 8 props
+    Credits: 18187 
+    ✓ IND @ CLE: 12 props
+    Credits: 18184 
+    ✓ CHA @ MIN: 13 props
+    Credits: 18181 
+    ✓ ORL @ NOP: 12 props
+    Credits: 18178 
+    ✓ UTA @ OKC: 15 props
+    Credits: 18175 
+    ✓ LAL @ DAL: 13 props
+    Credits: 18172 
+    ✓ LAC @ SAC: 12 props
+    Credits: 18169 
+    ✓ HOU @ GSW: 13 props
+  Total: 123 props across 11 games
+  ✓ Excel updated: PropEdge_-_Match_and_Player_Prop_lines_.xlsx
+    Player_Points_Props : 16,697 → 16,697 rows (+0)
+    Team_Spreads_Totals : 1,423 → 1,423 rows (+0)
+
+  Running V10.0 predictions...
+    Building B2B delta + dynamic DVP caches...
+    Segment model: 3 tiers
+  123 predictions (117 conviction + 6 leans, 0 skipped)
+
+  ✓ today.json: 132 plays (19 T1, 30 T2)
+    Added:0 Updated:123 Preserved:9
+  ✓ Git push: B2: 2026-04-05 — 123 plays
