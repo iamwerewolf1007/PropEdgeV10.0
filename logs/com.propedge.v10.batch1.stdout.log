@@ -194,3 +194,35 @@ fatal: Could not read from remote repository.
 Please make sure you have the correct access rights
 and the repository exists.
 
+============================================================
+PropEdge V10.0 — BATCH 1: PREDICT
+  Date: 2026-04-06 | 2026-04-06 08:00 BST
+============================================================
+
+  Fetching props for 2026-04-06 (Batch 1)...
+    Window: 2026-04-06T03:00:00Z → 2026-04-07T05:00:00Z (UTC, anchored to ET midnight)
+    Credits: 18103 events
+    5 games on 2026-04-06
+    Credits: 18100 
+    ✓ NYK @ ATL: 13 props
+    Credits: 18088 
+    ✓ DET @ ORL: 14 props
+    Credits: 18076 
+    ✓ CLE @ MEM: 7 props
+    Credits: 18064 
+    ✓ PHI @ SAS: 13 props
+    Credits: 18055 
+    ✓ POR @ DEN: 13 props
+  Total: 60 props across 5 games
+  ✓ Excel updated: PropEdge_-_Match_and_Player_Prop_lines_.xlsx
+    Player_Points_Props : 16,707 → 16,767 rows (+60)
+    Team_Spreads_Totals : 1,423 → 1,428 rows (+5)
+
+  Running V10.0 predictions...
+    Building B2B delta + dynamic DVP caches...
+    Segment model: 3 tiers
+  60 predictions (56 conviction + 4 leans, 0 skipped)
+
+  ✓ today.json: 60 plays (5 T1, 9 T2)
+    Added:60 Updated:0 Preserved:0
+  ✓ Git push: B1: 2026-04-06 — 60 plays

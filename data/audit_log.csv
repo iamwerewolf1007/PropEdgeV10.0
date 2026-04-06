@@ -220,3 +220,4 @@ ts,batch,event,file,rows_before,rows_after,detail
 2026-04-06 08:36:55,B1,PREDICTIONS,,,,"60 plays, skipped 0"
 2026-04-06 08:36:57,B1,BATCH_SUMMARY,,,,"props_fetched=60, plays_added=60"
 2026-04-06 08:36:57,B1,INTEGRITY_OK,/Users/salman/Documents/GitHub/PropEdgeV10.0/data/today.json,582,642,SAVE_TODAY
+2026-04-06 08:37:17,B1,BATCH_COMPLETE,,,,
