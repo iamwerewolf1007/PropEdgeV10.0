@@ -238,3 +238,44 @@ PropEdge V10.0 — BATCH 0: GRADE + UPDATE
     In-sample accuracy: 69.6%
   ✓ Git push: B0: grade 2026-04-05
   ✓ BATCH 0 complete
+============================================================
+PropEdge V10.0 — BATCH 0: GRADE + UPDATE
+  2026-04-07 06:14 BST
+============================================================
+  Grading: 2026-04-06
+
+  Fetching box scores: 2026-04-06...
+    5 games
+    ✗ game 0022501143: ('Connection aborted.', ConnectionResetError(54, 'Connection reset by peer'))
+  Fetched 83 played rows, 110 players in box
+  ✓ Graded 46: 20W/26L, 19 DNP
+  ✓ Game logs: 25310 → 25412 (+83 played, +19 DNP stubs)
+  ⚠ update_postmatch_rolling: failed to load CSV — name 'load_combined' is not defined
+
+  Cross-checking rolling stats for 2026-04-06...
+  ✓ Cross-check: all rolling stats consistent for 2026-04-06
+
+  Rebuilding H2H...
+  ✓ H2H: 15647 pairs → h2h_database.csv
+  Retraining V10.0 models...
+    Building training data...
+    Played rows: 51,008   Players: 634
+    Computing vectorised rolling features...
+    After sequence filter: 44,919
+    Final training samples: 44,919
+    Training global enhanced GBR (depth=5, 36 features)...
+    GBR: 116 trees
+    ✓ projection_model.pkl
+    Training per-usage-tier segment models...
+    Segment 'role': 34,614 rows  trees=200
+    Segment 'rotational': 7,133 rows  trees=200
+    Segment 'star': 3,172 rows  trees=200
+    ✓ segment_model.pkl
+    Training quantile GBR (P25 + P75)...
+    ✓ quantile_models.pkl
+    Fitting isotonic probability calibrator...
+    ✓ calibrator.pkl
+    ✓ player_trust.json (550 players)
+    In-sample accuracy: 69.6%
+  ✓ Git push: B0: grade 2026-04-06
+  ✓ BATCH 0 complete
