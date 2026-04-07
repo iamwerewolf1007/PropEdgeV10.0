@@ -256,3 +256,16 @@ ts,batch,event,file,rows_before,rows_after,detail
 2026-04-07 07:43:19,B0,INTEGRITY_OK,/Users/salman/Documents/GitHub/PropEdgeV10.0/source-files/nba_gamelogs_2025_26.csv,25412,25418,APPEND_GAMELOGS
 2026-04-07 07:43:20,B0,ROLLING_UPDATE_FAILED,,,,name 'load_combined' is not defined
 2026-04-07 07:47:33,B0,BATCH_COMPLETE,,,,
+2026-04-07 07:51:46,B0,BATCH_COMPLETE,,,,
+2026-04-07 07:53:10,B0,BATCH_START,,,,
+2026-04-07 07:53:18,B0,BOXSCORES_FETCHED,,,,102 rows for 2026-04-06
+2026-04-07 07:53:19,B0,BATCH_SUMMARY,,,,"plays_graded=0, wins=0, losses=0, dnp=6"
+2026-04-07 07:53:22,B0,FILE_STATE_BEFORE_APPEND,nba_gamelogs_2025_26.csv,25418,,
+2026-04-07 07:53:40,B0,INTEGRITY_OK,/Users/salman/Documents/GitHub/PropEdgeV10.0/source-files/nba_gamelogs_2025_26.csv,25418,25418,APPEND_GAMELOGS
+2026-04-07 07:53:40,B0,ROLLING_UPDATE_FAILED,,,,name 'load_combined' is not defined
+2026-04-07 07:54:25,B1,BATCH_START,,,,2026-04-07
+2026-04-07 07:54:33,B1,PROPS_FETCHED,,,,"117 props, 10 games"
+2026-04-07 07:55:03,B1,EXCEL_SOURCE_UPDATED,,,,props=16889 (+117) spreads=1438 (+10)
+2026-04-07 07:55:36,B1,PREDICTIONS,,,,"115 plays, skipped 2"
+2026-04-07 07:55:37,B1,BATCH_SUMMARY,,,,"props_fetched=115, plays_added=115"
+2026-04-07 07:55:37,B1,INTEGRITY_OK,/Users/salman/Documents/GitHub/PropEdgeV10.0/data/today.json,647,762,SAVE_TODAY
