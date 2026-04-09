@@ -319,3 +319,10 @@ ts,batch,event,file,rows_before,rows_after,detail
 2026-04-09 12:01:07,B0,FILE_STATE_BEFORE_APPEND,nba_gamelogs_2025_26.csv,25650,,
 2026-04-09 12:01:42,B0,INTEGRITY_OK,/Users/salman/Documents/GitHub/PropEdgeV10.0/source-files/nba_gamelogs_2025_26.csv,25650,25817,APPEND_GAMELOGS
 2026-04-09 12:01:42,B0,ROLLING_UPDATE_FAILED,,,,name 'load_combined' is not defined
+2026-04-09 12:16:47,B0,BATCH_COMPLETE,,,,
+2026-04-09 17:43:54,B2,BATCH_START,,,,2026-04-09
+2026-04-09 17:43:58,B2,PROPS_FETCHED,,,,"62 props, 6 games"
+2026-04-09 17:44:20,B2,EXCEL_SOURCE_UPDATED,,,,props=17042 (+62) spreads=1451 (+6)
+2026-04-09 17:44:43,B2,PREDICTIONS,,,,"62 plays, skipped 0"
+2026-04-09 17:44:44,B2,BATCH_SUMMARY,,,,"props_fetched=62, plays_added=62"
+2026-04-09 17:44:44,B2,INTEGRITY_OK,/Users/salman/Documents/GitHub/PropEdgeV10.0/data/today.json,853,915,SAVE_TODAY
